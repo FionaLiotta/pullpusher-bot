@@ -2,7 +2,7 @@
 // |__) /  \  |  |__/ |  |  
 // |__) \__/  |  |  \ |  |  
 
-// This is the main file for the BotKitSoloUser bot.
+// This is the main file for the SlackBotExample bot.
 
 // Import Botkit's core features
 const { Botkit } = require('botkit');
