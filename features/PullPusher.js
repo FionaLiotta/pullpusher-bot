@@ -11,6 +11,10 @@ const repoListSchema = new mongoose.Schema({
 const RepoList = mongoose.model('RepoList', repoListSchema);
 
 module.exports = function(controller) {
+
+    // Add Repo
+    // TODO: Check that the user supplied a valid repo
+    // TODO: Check that the repo does not already exist in that team's list
     controller.hears(['addrepo'], ['direct_mention'], async(bot, message) => {
         //extract the repo ID from the message
         const extractRepo = /(?<=github\.com\/).+[^.git>|>]/;
@@ -51,4 +55,10 @@ module.exports = function(controller) {
             });
         });
     });
+
+    //TODO: Delete Repo
+    //TODO: List tracked repos
+    //TODO: Scan Repos for stale PRs
+    //TODO: Change channel to speak in
+
 }
